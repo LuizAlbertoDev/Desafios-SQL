@@ -22,6 +22,10 @@ const usuario = db.prepare(`SELECT * FROM usuarios ORDER BY nome ASC LIMIT 2`).a
 
 console.log(usuario)
 
-const usuarioTest = db.prepare(`SELECT * FROM usuarios ORDER BY nome DESC`).all()
+const usuarioTest = db.prepare(`
+    SELECT * 
+    FROM usuarios 
+    ORDER BY nome DESC
+`).all()
 
 console.log(usuarioTest)

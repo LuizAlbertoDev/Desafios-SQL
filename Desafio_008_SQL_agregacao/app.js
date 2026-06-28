@@ -28,6 +28,11 @@ const valorTotal = db.prepare(`SELECT SUM(preco) as valor_Total FROM produtos`).
 
 console.log(valorTotal)
 
-const quantidadeCategoria = db.prepare(`SELECT categoria, COUNT(*) as quantidade FROM produtos GROUP BY categoria`).all()
+const quantidadeCategoria = db.prepare(`
+    SELECT categoria, 
+    COUNT(*) as quantidade 
+    FROM produtos 
+    GROUP BY categoria
+`).all()
 
 console.log(quantidadeCategoria)
